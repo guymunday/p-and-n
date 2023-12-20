@@ -116,7 +116,9 @@ function handleTextAnimation() {
     container.appendChild(span)
   })
 
-  gsap.fromTo(
+  let tl = gsap.timeline()
+
+  tl.to(".content", { opacity: 1 }).fromTo(
     ".word",
     {
       opacity: 0,
